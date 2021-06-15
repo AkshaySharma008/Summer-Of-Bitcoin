@@ -1,0 +1,27 @@
+{
+  "name": "summer-of-bitcoin",
+  "version": "1.0.0",
+  "description": "This is my solution submission for the task provided by Summer of Bitcoin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkshaySharma008/Summer-Of-Bitcoin.git"
+  },
+  "keywords": [
+    "Open",
+    "Source"
+  ],
+  "author": "Akshay Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkshaySharma008/Summer-Of-Bitcoin/issues"
+  },
+  "homepage": "https://github.com/AkshaySharma008/Summer-Of-Bitcoin#readme",
+  "dependencies": {
+    "fast-csv": "^4.3.6"
+  }
+}
