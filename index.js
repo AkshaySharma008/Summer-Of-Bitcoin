@@ -1,3 +1,24 @@
+// The following steps were used in the implementation of the code:
+
+// 1. Create an empty transactions array for storing every parsed transaction from the csv. 
+// 2. Parse mempool.csv using fast-csv and for every row
+//    - Calculate the fee/weigh ratio
+//    - Append a new row to the transactions matrix for this transaction having the format 
+// 3. Sort the transactions array:
+//    - reverse sort on the basis of fee/weight ratio
+//    - if two have the same ratio, sort on the basis of the size of the parent transactions array.
+// 4. Create a processed object to store transaction ids of all the processed transactions.
+// 5. For every transaction in the transactions array, validate it if:
+//    - processed weight + transaction weight is lesser than or equal to 4000000
+//    - all of the parent transactions have been processed before i.e. their ids are present in the processed object.
+// 6. If both the conditions are valid, process this transaction: 
+//    - increase the values of the processed weight and the fee 
+//    - add this transaction id to the processed object.
+//    - append this transaction's id to the block.txt file.
+//    - increase the count of processed transactions
+// 7. Log the total processed weight, fee earned and the number of transactions processed.
+
+
 // Importing required Libraries
 const fs = require('fs');
 const csv = require('@fast-csv/parse');
